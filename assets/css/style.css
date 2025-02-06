@@ -1,0 +1,84 @@
+/* Reset CSS */
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng (Kiểu chữ, hình tròn, vuông,...) */
+
+/* 
+Nguyên tắc làm việc
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+ */
+
+/* Áp dụng lên tất cả các phần tử */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Chỉ sử dụng cho những phần tử chứa chữ */
+html {
+  /* theo thứ tự là: font - font - chủng font */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+  
+}
+
+#header {
+   height: 46px;
+   background-color: black;
+}
+
+#nav {}
+
+/* Các thẻ li bên trong nav */
+#nav li {
+  /* Thuộc tính inline-block giúp phần tử chiếm diện tích bằng chính phần của nó(display: inline), 
+  dùng đến đâu chiếm đến đó và có thể chỉnh được kích thước width height
+  (display: inline không dùng được width height) */
+  display: inline-block;
+}
+
+/* Subnav hay submenu(Theo nguồn tra được) là thư mục con của nav hay của menu */
+/* Cách biểu diễn này giúp sử dụng các thuộc tính bên trong subnav 
+và chỉ ảnh hưởng đến subnav là con của nav */
+#nav .subnav {
+  display: none
+}
+
+/* Css vào thẻ a là con của li là con của nav */
+#nav li a {
+  /* inline-block giúp thẻ a thay đổi kích thước mặc định auto sang kích thước ăn theo chính line-height của nó 
+  do nó có display mặc định là inline  */
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  /* Khoảng cách giữa chữ và khoảng trống: Phần tử: ([<->Chữ<->]) (hình dung theo chiều dọc)*/
+  line-height: 46px;
+  padding: 0 24px;
+}
+
+/* Hover cho li để khi hover vào thẻ con của thẻ More thì thẻ More sẽ bị không mất màu */
+#nav li:hover a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#slider {
+ 
+}
+
+#content {
+
+}
+
+#footer {
+
+}
+
+
