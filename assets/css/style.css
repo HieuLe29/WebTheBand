@@ -34,43 +34,87 @@ html {
    background-color: black;
 }
 
-#nav {}
+#nav, .subnav {
+  /* Kiểu danh sách mặc đinh là none, áp dụng cho ul li */
+  list-style-type: none;
+}
+
+#nav {
+}
+
+/* Chỉ cho phần tử li ở cấp 1 có thuộc tính inline-block */
+#nav > li {
+  display: inline-block;
+}
 
 /* Các thẻ li bên trong nav */
 #nav li {
-  /* Thuộc tính inline-block giúp phần tử chiếm diện tích bằng chính phần của nó(display: inline), 
-  dùng đến đâu chiếm đến đó và có thể chỉnh được kích thước width height
-  (display: inline không dùng được width height) */
-  display: inline-block;
+  /* Các phần tử li là con của nav sẽ mang thuộc tính relative */
+  position: relative;
 }
 
 /* Subnav hay submenu(Theo nguồn tra được) là thư mục con của nav hay của menu */
 /* Cách biểu diễn này giúp sử dụng các thuộc tính bên trong subnav 
 và chỉ ảnh hưởng đến subnav là con của nav */
 #nav .subnav {
-  display: none
+  /* Ẩn phần tử thẻ li */
+  display: none;
+  /* Chiều dài tối thiểu */
+  min-width: 160px;
+  /* Phần tử có id subnav sẽ chịu ảnh hưởng của #nav li {} */
+  position: absolute;
+  background-color: #fff;
+  /* Lớp bóng đổ */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+  color: #000;
+  /* Dùng nguyên tắc kích thước chia hết cho 4 tạo khoảng cách */
+  padding: 0 12px;
+  /* Xét lại chiều cao các phần tử trong subnav cho ngắn lại*/
+  line-height: 38px;
+}
+
+/* Css vào hậu duệ trực tiếp */
+#nav > li > a {
+  color: #fff;
+  /* Chữ viết hoa */
+  text-transform: uppercase;
 }
 
 /* Css vào thẻ a là con của li là con của nav */
 #nav li a {
-  /* inline-block giúp thẻ a thay đổi kích thước mặc định auto sang kích thước ăn theo chính line-height của nó 
-  do nó có display mặc định là inline  */
-  display: inline-block;
-  color: #fff;
+  /* Theo giả thuyết của mình, 
+  thẻ a chịu ảnh hưởng thẻ li nên tất cả các thẻ li và a bên trong #nav sẽ chịu ảnh hưởng thuộc tính block, 
+  mà bên trên hậu duệ trực tiếp(trực hệ hay child-selector) của #nav là li đã chịu ảnh hưởng của thuộc tính inline-block 
+  nên các phần tử child-selector đó nằm trên 1 dòng, các phần tử thẻ a là ăn theo chứa thuộc tính block 
+  là chiếm toàn bộ phần chiều dài của nó trong giới hạn phạm vi li */
+  display: block;
   text-decoration: none;
+  top: 100%;
+  left: 0;
   /* Khoảng cách giữa chữ và khoảng trống: Phần tử: ([<->Chữ<->]) (hình dung theo chiều dọc)*/
   line-height: 46px;
   padding: 0 24px;
 }
 
+/* Hiển thị phần subnav hay ghi đè display:none*/
+#nav li:hover .subnav {
+  display: block;
+}
+
 /* Hover cho li để khi hover vào thẻ con của thẻ More thì thẻ More sẽ bị không mất màu */
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .subnav > li:hover a {
   color: #000;
   background-color: #ccc;
 }
 
 #slider {
- 
+  /* Chiều cao tối thiểu */
+  min-height: 500px;
+  background-color: #333;
 }
 
 #content {
