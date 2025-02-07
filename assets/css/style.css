@@ -32,6 +32,14 @@ html {
 #header {
    height: 46px;
    background-color: black;
+   /* Thêm thuộc tính bám dính fixed vào header khi trình duyệt dài hơn trang web 
+   và giúp thẻ header đứng tĩnh*/
+   position: fixed;
+   /* Đảm bảo trên mọi trình duyệt top=0 */
+   top: 0;
+   /* Dính 2 bên header vào 2 bên màn hình */
+   left: 0;
+   right: 0;
 }
 
 #nav, .subnav {
@@ -142,6 +150,8 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   /* Chiều cao tối thiểu */
   min-height: 500px;
   background-color: #333;
+  /* Vì thuộc tính position ở header là fixe nên slider sẽ chiếm luôn nên cần khoảng trống */
+  margin-top: 46px;
 }
 
 #content {
