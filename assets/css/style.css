@@ -40,6 +40,8 @@ html {
 }
 
 #nav {
+  /* Làm mất tính kế thừa 100% chiều ngang thẻ cha là header */
+  display: inline-block;
 }
 
 /* Chỉ cho phần tử li ở cấp 1 có thuộc tính inline-block */
@@ -109,6 +111,31 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 #nav .subnav > li:hover a {
   color: #000;
   background-color: #ccc;
+}
+
+/* Chỉnh icon arrow-down ở header*/
+#nav .nav-arrow-down {
+  /* Icon cũng thuộc kiểu font */
+  font-size: 14px;
+}
+
+#header .search-btn {
+  /* Thuộc tính giúp phần tử trôi nổi ở bên nào(ở đây cụ thể là bên phải) */
+  float: right;
+  padding: 0 21px;
+}
+/* Khi di vào nút button search đổi màu */
+#header .search-btn:hover {
+  background-color: #f44336;
+  /* Thuộc tính thay đổi hình dạng trỏ chuột */
+  cursor: pointer;
+}
+
+/* Chỉnh icon search ở header */
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
 }
 
 #slider {
