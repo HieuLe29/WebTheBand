@@ -84,6 +84,7 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   color: #000;
   /* Dùng nguyên tắc kích thước chia hết cho 4 tạo khoảng cách */
   padding: 0 12px;
+  /* Thuộc tính này chỉ định chiều cao của 1 dòng, dùng để tạo khoảng cách giữa các dòng */
   /* Xét lại chiều cao các phần tử trong subnav cho ngắn lại*/
   line-height: 38px;
 }
@@ -188,6 +189,38 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 
 #content {
 
+}
+
+#content .content-section {
+  width: 800px;
+  padding: 64px 0;
+  margin: 0 auto;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  /* Khoảng cách các chữ trong từ */
+  letter-spacing: 3px;
+}
+
+#content .section-sub-heading {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 25px;
+  /* Thuộc tính phong cách của font, ở đây là nghiêng*/
+  font-style: italic;
+  /* Thuộc tính làm mờ */
+  opacity: 0.6;
+}
+
+#content .about-text {
+  margin-top: 25px;
+  font-size: 15px;
+  /* Căn đều 2 bên */
+  text-align: justify;
+  line-height: 1.5;
 }
 
 #footer {
