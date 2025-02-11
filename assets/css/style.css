@@ -12,6 +12,17 @@ Nguyên tắc làm việc
 3. Từ tổng quan đến chi tiết
  */
 
+ /* Khi sử dụng float, các phần tử phía sau có thể bị trôi lên hoặc bao bọc quanh phần tử float, 
+ làm hỏng bố cục trang web. Thuộc tính clear giúp ngăn chặn điều này bằng cách buộc phần tử đứng sau phải xuống dưới phần tử đã float, 
+ thay vì bị đẩy lên bên cạnh. */
+/* clear: left; → Ngăn phần tử này (đoạn văn) đứng cạnh phần tử float: left (hình ảnh).
+clear: right; → Ngăn phần tử này đứng cạnh phần tử float: right.
+clear: both; → Ngăn phần tử này đứng cạnh bất kỳ phần tử nào có float (dù là trái hay phải). */
+.clear {
+  clear: both;
+}
+
+
 /* Áp dụng lên tất cả các phần tử */
 * {
   padding: 0;
@@ -223,6 +234,30 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   line-height: 1.5;
 }
 
+#content .members-list {
+  margin-top: 48px;
+}
+
+#content .member-item {
+  /* 3 phần giới thiệu member nằm trên 1 hàng */
+  float: left;
+  /* Chia 3 sao cho tổng chiều ngang 3 phần giới thiệu thành viên bằng 100% 
+  Điều này giúp căn đều 3 phần chiều ngang*/
+  width: calc(100% / 3);
+  /* Căn giữa các phần tử con trong member-item */
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  width: 154px;
+  margin-top: 15px;
+  /* Bo góc ảnh */
+  border-radius: 4px;
+}
 #footer {
 
 }
