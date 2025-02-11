@@ -40,6 +40,8 @@ html {
    /* Dính 2 bên header vào 2 bên màn hình */
    left: 0;
    right: 0;
+   /* Thuộc tính giúp chìm nổi phần tử */
+   z-index: 1;
 }
 
 #nav, .subnav {
@@ -147,11 +149,41 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 }
 
 #slider {
-  /* Chiều cao tối thiểu */
-  min-height: 500px;
-  background-color: #333;
+  /* Thuộc tính position ở slider giúp bảo toàn kích thước slider và để text-content nằm trên 1 lớp so với slider 
+  nhằm tránh chiếm thêm diện tích slider  */
+  position: relative;
   /* Vì thuộc tính position ở header là fixe nên slider sẽ chiếm luôn nên cần khoảng trống */
   margin-top: 46px;
+  /* Chiều cao bằng 1/2 chiều ngang */
+  padding-top: 50%;
+  background: url('/assets/img/slider/slider_chicago.jpg') top center / cover no-repeat;
+}
+
+#slider .text-content {
+  /* Thuộc tính absolute chỉnh vị trí chữ trong slider 
+  3 thuộc tính đi cùng nhau căn giữa 1 phần tử theo chiều ngang gồm
+  position, left, transform*/
+  position: absolute;
+  /* Di chuyển méo trái của phần tử đến 50% chiều rộng phần tử cha */
+  /* Tuy nhiên, lúc này mép trái của phần tử nằm ở giữa phần tử cha, khiến phần tử bị lệch sang phải */
+  /* left: 50%; */
+  /* Thuộc tính transform áp dụng phép biến đổi 2d, 3d cho phần tử mà cụ thể ở đây là 
+  Dịch chuyển phần tử theo chiều ngang (trục X) một khoảng bằng 50% chiều rộng của chính nó về bên trái.*/
+  /* transform: translateX(-50%); */
+  width: 100%;
+  /* Cách phía bên dưới slider 47px */
+  bottom: 47px;
+  color: #fff;
+  /* Căn giữa văn bản */
+  text-align: center;
+}
+#slider .text-heading {
+  /* Độ dày chữ */
+  font-weight: 500;
+  font-size: 24px;
+}
+#slider .text-description {
+  margin-top: 25px;
 }
 
 #content {
