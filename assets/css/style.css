@@ -22,6 +22,11 @@ clear: both; → Ngăn phần tử này đứng cạnh bất kỳ phần tử n�
   clear: both;
 }
 
+/* Bất cứ đoạn code nào khi thêm class này thì chữ cũng sẽ có màu trắng */
+.text-white {
+
+  color: #fff !important;
+}
 
 /* Áp dụng lên tất cả các phần tử */
 * {
@@ -258,6 +263,48 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   /* Bo góc ảnh */
   border-radius: 4px;
 }
+
+.tour-section {
+  background-color: #000;
+}
+
+.tickets-list { 
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.tickets-list li {
+  color: #757575;
+  font-size: 15px;
+  padding: 8px 16px;
+  /* Đường viền */
+  border-bottom: 1px solid #ddd;
+   /* Kiểu danh sách mặc đinh là none, áp dụng cho ul li */
+   list-style-type: none;
+}
+
+.tickets-list .sold-out {  
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 8px;
+  margin: 0 0 0 16px;
+}
+
+.tickets-list .quantity {
+  /* Thuộc tính float đi cùng thuộc tính display: block 
+  Khi bỏ đi float sẽ quay về trạng thái display: inline của thẻ span*/
+  float: right;
+  background-color: #000;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50%;
+  /* Do cái hình tròn bị thụt xuống tầm 3px nên cần lùi lên 3px */
+  margin-top: -3px;
+}
+
 #footer {
 
 }
