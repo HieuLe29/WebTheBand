@@ -360,6 +360,101 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   color: #000;
 }
 
+/* Giao diện model và lớp phủ overlay*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Lớp phủ overlay */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  /* Căn giữa phần tử theo chiều dọc */
+  align-items: center;
+  /* Căn giữa phần tử theo chiều ngang */
+  justify-content: center;
+}
+
+.modal-container {
+  position: relative;
+  background-color: #fff;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  min-height: 200px;
+}
+
+.modal-header {
+  background: #009688;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  padding: 12px;
+}
+
+.modal-close:hover, #buy-tickets:hover {
+  background-color: #757575;
+  color: #000;
+  /* Thay đổi hình dạng trỏ chuột */
+  cursor: pointer;
+}
+
+.modal-buy-ticket {
+  margin-right: 16px;
+}
+
+.modal-body {
+  padding: 0 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.modal-input {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+#buy-tickets {
+  display: block;
+  margin: 15px 0;
+  padding: 16px;
+  width: 100%;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  /* Viết hoa */
+  text-transform: uppercase;
+}
+
+
+
+.modal-footer .modal-help {
+  text-align: right;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.modal-help a {
+  color: #2196F3;
+}
+
 #footer {
 
 }
