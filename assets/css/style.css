@@ -33,6 +33,10 @@ clear: both; → Ngăn phần tử này đứng cạnh bất kỳ phần tử n�
   text-align: center !important;
 }
 
+.pull-right {
+  float: right !important;
+}
+
 .mt-8 {
   margin-top: 8px !important;
 }
@@ -73,7 +77,21 @@ DÙng cái này không cần dùng div clear*/
   width: 33.33333%;
 }
 
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+}
 
+.btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
 /* Áp dụng lên tất cả các phần tử */
 * {
   padding: 0;
@@ -256,7 +274,7 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 
 #content .content-section {
   width: 800px;
-  padding: 64px 0;
+  padding: 64px 0 112px;
   margin: 0 auto;
 }
 
@@ -345,7 +363,6 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 /* Places */
 .places-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .place-img {
@@ -376,18 +393,6 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 .place-desc {
   margin: 15px 0;
   line-height: 1.4;
-}
-
-.place-buy-btn {
-  padding: 8px 16px;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-}
-
-.place-buy-btn:hover {
-  background-color: #ccc;
-  color: #000;
 }
 
 /* Giao diện model và lớp phủ overlay*/
@@ -440,7 +445,7 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   padding: 12px;
 }
 
-.modal-close:hover, #buy-tickets:hover, .contact-content .form-submit-btn:hover {
+.modal-close:hover, #buy-tickets:hover {
   background-color: #ccc;
   color: #000;
   /* Thay đổi hình dạng trỏ chuột */
@@ -519,18 +524,39 @@ nhưng chỉ khi nó nằm trong phần tử có class .contact. */
   outline: none;
 }
 
-.contact-form .form-submit-btn {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #000;
-  padding: 10px 16px;
-  float: right;
-  border: none;
+/* Map section */
+.map-section img {
+  width: 100%;
 }
 
 #footer {
-
+  padding: 64px 16px;
+  text-align: center;
 }
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+#footer .socials-list a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 
 /* Tạo ra chuyển động lên xuống cho modal */
 @keyframes modalFadeIn {
