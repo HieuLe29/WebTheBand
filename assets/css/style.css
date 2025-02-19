@@ -24,7 +24,6 @@ clear: both; → Ngăn phần tử này đứng cạnh bất kỳ phần tử n�
   clear: both;
 }
 
-
 /* Bất cứ đoạn code nào khi thêm class này thì chữ cũng sẽ có màu trắng */
 .text-white {
   color: #fff !important;
@@ -34,15 +33,36 @@ clear: both; → Ngăn phần tử này đứng cạnh bất kỳ phần tử n�
   text-align: center !important;
 }
 
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+/* Create system - hệ thống lưới hay tiêu chuẩn thiết kế */
 .row {
   margin-left: -8px;
   margin-right: -8px;
+}
+
+/* Pseudo code - Mã giã: Đây là cách viết html trong css 
+DÙng cái này không cần dùng div clear*/
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .col {
   float: left;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.col-full {
+  width: 100%;
 }
 
 .col-half {
@@ -420,8 +440,8 @@ và chỉ ảnh hưởng đến subnav là con của nav */
   padding: 12px;
 }
 
-.modal-close:hover, #buy-tickets:hover {
-  background-color: #757575;
+.modal-close:hover, #buy-tickets:hover, .contact-content .form-submit-btn:hover {
+  background-color: #ccc;
   color: #000;
   /* Thay đổi hình dạng trỏ chuột */
   cursor: pointer;
@@ -469,6 +489,43 @@ và chỉ ảnh hưởng đến subnav là con của nav */
 
 .modal-help a {
   color: #2196F3;
+}
+
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-infor {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Sử dụng Attribute Selector ([attr*="value"]) để chọn các phần tử <i> có class chứa chuỗi "ti-" bên trong, 
+nhưng chỉ khi nó nằm trong phần tử có class .contact. */
+.contact-infor i[class*="ti-"] {
+  width: 30px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  /* Đường viền ngoài thẻ input*/
+  outline: none;
+}
+
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
+  border: none;
 }
 
 #footer {
